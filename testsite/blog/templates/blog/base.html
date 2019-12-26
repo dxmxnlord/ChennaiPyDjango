@@ -1,0 +1,128 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Blog</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora|Work+Sans&display=swap" rel="stylesheet">
+	<style type="text/css">
+
+		{% block footercss %}
+			.footer {
+			  position: fixed;
+			  bottom: 0;
+			  width: 100%;
+			  height:60px;
+			  padding-top:5px;
+			  background-color: white;
+			  color: black;
+			  text-align: center;
+			}
+		{% endblock %}
+
+		{% block navbarcss %}
+			.bootnavbar{
+				background-color: white;
+			}
+			.nav-link{
+				color: black;
+			}
+			.navbar-brand{
+				color: black;
+			}
+		{% endblock %}
+
+		#photo{
+			height:400px;
+			width: 400px;
+			border-radius: 5px;
+		}
+		#navphoto{
+			height:50px;
+			width: 50px;
+		}
+		html{
+			height: 100%;
+		}
+		#cont1{
+			margin-top: 85px;
+		}
+		body{
+			background-image: url("{% static 'images/background.svg' %}");
+		}
+		.about{
+			text-align: center;
+	</style>
+
+	{% block contentcss %}
+	{% endblock %}
+
+</head>
+
+<body>
+	{% block navbar %}
+
+		<div class="bootnavbar">
+			<nav class="navbar navbar-expand-lg navbar-light ">
+			  <a class="navbar-brand">Mysite</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto">
+			      <li class="nav-item">
+			        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="/aboutme">About Me</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="{% url 'blog:index' %}">Blog</a>
+			      </li>
+			    </ul>
+			    <ul class="navbar-nav " style="align-content: right;">
+			    	<li>
+			    		<img src="{% static 'images/me.jpg' %}" id="navphoto">
+			    	</li>
+			    </ul>
+			  </div>
+			</nav>
+		</div>
+
+	{% endblock %}
+
+	{% block content %}
+	{% endblock %}
+
+	<br><br>
+
+	{% block footer %}
+		<section id="lab_social_icon_footer" class="footer">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<div class="container">
+		    <div class="text-center center-block">
+              <a href="https://www.facebook.com"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+              <a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+              <a href="https://plus.google.com"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+              <a href="mailto:#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+		    </div>
+		</div>
+		</section>
+	{% endblock %}
+
+</body> 
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</html>

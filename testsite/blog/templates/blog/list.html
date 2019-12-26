@@ -1,0 +1,98 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+	<br>
+	<marquee id="markwee" hspace="37%" direction="right"><h1>The Python Blog</h1></marquee>
+	<br><hr>
+	<h2 id="title">Blog Posts</h2>
+	<hr id="hr"><br>
+	<div id="postie" class="container">
+		<ul class="postlist" id="postcontent" >
+			{% for post in posts %}
+				<div class="row posts">
+					<div class="col-lg-9 post" style="overflow: hidden;">
+						<li class="posttext" >
+							<a href="{% url 'blog:index' %}view/{{post.id}}/" class="posttitle" >{{post.title}}</a>
+						</li>
+					</div>
+					<div class="col-lg-3">
+						<em>{{post.date}}</em>
+					</div>
+				</div>
+			{% endfor %}
+		</ul>
+	</div>
+	<br>
+	<div class="pageoptions">
+		<a href="{% url 'blog:index' %}newpost/"><button style="border-radius: 5px;border: 0;background-color: white;transform: scale(1.2);">New Post</button></a>
+	</div>
+	<br>
+	<div class="container" id="page">
+		<div class="paginator">
+			{% with ''|center:total_pages as range %}
+			{% for x in range %}
+			    <a class="pagi" href="{% url 'blog:index' %}{{forloop.counter}}">{{ forloop.counter }}</a>
+			{% endfor %}
+			{% endwith %}
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block contentcss %}
+<style type="text/css">
+	#markwee{
+		/*background-image: linear-gradient(to bottom right, purple, pink, darkblue);*/
+		border-radius: 5px;
+		margin-top: 5px;
+		font-family: 'Special Elite';
+		color: white;
+	}
+	#title{
+		text-align: center;
+		font-family: Montserrat;
+		color: white;
+		margin-top: 50px;
+	}
+	.postlist{
+		background-color: rgba(255, 192, 203);
+		border-radius: 3px;
+		margin-bottom: 0;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		font-family: Work Sans;
+		box-shadow: 0px 0px 60px -7px rgba(122,113,122,1);
+	}
+	.pageoptions{
+		text-align: center;
+	}
+	.paginator{
+		text-align: center;
+	}
+	.posts{
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.posttext{
+		font-size: 20px;
+	}
+	hr{
+		border-color: white;
+		border-width: 1px;
+	}
+	#hr{
+		width: 50%;
+	}
+	.posttitle{
+		color: #a80d22;
+	}
+	.posttitle:hover{
+		font-size:20px;
+	}
+	.pagi{
+		color: white;
+		font-size: 25px;
+	}
+</style>
+{% endblock %}

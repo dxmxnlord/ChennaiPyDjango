@@ -1,0 +1,308 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Rishikesh Sriram</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Raleway:400,300,700" rel="stylesheet">
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <style type="text/css">
+    {% block navbarcss %}
+    {% endblock %}
+    #navphoto{
+      height:50px;
+      width: 50px;
+    }
+    #gg{
+      font-size: 18px;
+      margin-top: 1%;
+    }
+  </style>
+</head>
+
+<body>
+
+  {% block navbar %}
+  {% endblock %}
+
+<div id="flexer" style="text-shadow: 2px 2px #e3e3e3;">
+  <div id="headerwrap">
+  </div>
+  <div id="flextwo" class="container">
+    <div class="row centered">
+      <div class="col-lg-12">
+        <h1>Rishikesh Sriram</h1>
+        <h3>rishikesh.sriram06@gmail.com</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <section id="about" name="about">
+    <div id="intro">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-2 col-lg-offset-1">
+            <h5>ABOUT</h5>
+          </div>
+          <div class="col-lg-6">
+            <p>I am a self-motivated student who has an ingrained passion for Computers and programming, and i'm always eager to add to my
+knowledge and apply what I have learnt. I'm interested in solving real world problems through the construction of organised programmable systems.</p>
+          </div>
+          <div class="col-lg-3">
+            <p>
+              <sm>9025119134</sm>
+              <br>
+              <sm>Chennai, India</sm>
+              <br>
+              <sm><a>www.github.com/dxmxnlord</a></sm>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="resume" name="resume">
+    <div class="container desc">
+      <div class="row">
+
+        <div class="col-lg-2 col-lg-offset-1">
+          <h5>EDUCATION</h5>
+        </div>
+        <div class="col-lg-6">
+          <p>
+            <t>High School</t><br/> Maharishi Vidya Mandir <br/>
+            <i>CBSE: 10/10</i>
+          </p>
+        </div>
+        <div class="col-lg-3">
+          <p>
+            <sm>2010-2014</sm><br/>
+          </p>
+        </div>
+
+        <div class="col-lg-6 col-lg-offset-3">
+          <p>
+            <t>High School</t><br/> Maharishi Vidya Mandir <br/>
+            <i>Board: 95%</i>
+          </p>
+        </div>
+        <div class="col-lg-3">
+          <p>
+            <sm>2016-2018</sm>
+          </p>
+        </div>
+
+        <div class="col-lg-6 col-lg-offset-3">
+          <p>
+            <t>College</t><br/> Vellore Institute of Technology Chennai  <br/>
+            <i>CSE Sophomore</i>
+          </p>
+        </div>
+        <div class="col-lg-3">
+          <p>
+            <sm>2018 - Present</sm>
+          </p>
+                      <imp>
+                        <sm>On Going</sm>
+                      </imp>
+        </div>
+
+      </div>
+      <br>
+      
+    </div>
+  </section>
+
+  <div id="skillswrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-lg-offset-1">
+          <h5>SKILLS</h5>
+        </div>
+        <div class="col-lg-3 centered">
+          <canvas id="javascript" height="130" width="130"></canvas>
+          <p>Fullstack Web Development</p>
+          <br>
+        </div>
+        <div class="col-lg-3 centered">
+          <canvas id="bootstrap" height="130" width="130"></canvas>
+          <p>Shell Scripting</p>
+          <br>
+        </div>
+        <div class="col-lg-3 centered">
+          <canvas id="wordpress" height="130" width="130"></canvas>
+          <p>REST/GraphQL APIs</p>
+          <br>
+        </div>
+
+        <div class="col-lg-3 col-lg-offset-3 centered">
+          <canvas id="html" height="130" width="130"></canvas>
+          <p>Computer Vision</p>
+          <br>
+        </div>
+        <div class="col-lg-3 centered">
+          <canvas id="photoshop" height="130" width="130"></canvas>
+          <p>Machine Learning</p>
+          <br>
+        </div>
+        <div class="col-lg-3 centered">
+          <canvas id="illustrator" height="130" width="130"></canvas>
+          <p>C/C++</p>
+          <br>
+        </div>
+
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <div class="container desc" id="projects">
+    <div class="row">
+
+      <div class="col-lg-2 col-lg-offset-1">
+        <h5>PROJECTS</h5>
+      </div>
+      <div class="col-lg-6">
+        <p>
+          <t>Aorta</t><br/> https://github.com/dxmxnlord/Aorta <br/>
+        </p>
+        <p>
+          <more>An assitive technology which harnesses the power of machine
+learning to accurately predict the existence of a heart disease in
+a patient and thereby letting doctors anticipate any forecoming
+ailments by also maintaining a record of all previous
+predictions</more>
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <sm>Won 1st place at a hackathon conducted by the ACM society</sm>
+        </p>
+      </div>
+
+      <div class="col-lg-6 col-lg-offset-3">
+        <p>
+          <t>Employee Performance Predictor</t><br/> https://github.com/dxmxnlord/employee-performance-predictor<br/>
+        </p>
+        <p>
+          <more>This web application predicts the performance of a given
+employee by utilizing a trained ML Model which uses Random
+Forest Classification for prediction. Upload an Excel sheet with
+the given parameters and the application returns another excel
+sheet with an additional column which is the performance
+rating of every employee.</more>
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <sm>Submission and 3rd place winner for the IEEE Expound
+Hackathon</sm>
+        </p>
+      </div>
+    </div>    
+    <div class="row">
+
+      <div class="col-lg-2 col-lg-offset-1">
+        <h5></h5>
+      </div>
+      <div class="col-lg-6">
+        <p>
+          <t>Stackbits</t><br/> https://github.com/dxmxnlord/StackBits <br/>
+        </p>
+        <p>
+          <more>Community platform for the residents of my local city. It helps people to interact with one another and resolve any questions or get emergency help. People can also sell items and find buyers in the same locality.</more>
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <sm>Facebook Hackathon 2018 project.</sm>
+        </p>
+      </div>
+
+      <div class="col-lg-6 col-lg-offset-3">
+        <p>
+          <t>Animenow</t><br/> https://github.com/dxmxnlord/Animenow<br/>
+        </p>
+        <p>
+          <more>Animenow is a console application that lets you manage the on-going anime you watch all through your terminal and maintain watching episode lists. It also lets you download the next episode of an anime that you are tracking as soon as it releases and let's you check for new episodes. This project is really helpful to an avid anime watcher like me. It was written in bash and python.</more>
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <sm>Personal Project</sm>
+        </p>
+      </div>
+    </div>
+    <br>
+    <hr>
+  </div>
+  <div class="container desc">
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-1">
+        <h5>EXTRACURRICULARS</h5>
+      </div>
+      <div class="col-lg-6">
+        <p>
+          <t>English Teacher</t><br/> Young Womens Christian Association <br/>
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <sm></sm>
+        </p>
+      </div>
+
+      <div class="col-lg-6 col-lg-offset-3">
+        <p>
+          <t>Core Member</t><br/> Event Managers Club VITC
+        </p>
+        <p>
+          <more></more>
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <sm></sm>
+        </p>
+      </div>
+
+    </div>
+    <br>
+  </div>
+
+
+
+
+  <section id="lab_social_icon_footer">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <div class="container">
+          <div class="text-center center-block">
+                  <a href="https://www.facebook.com"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="https://plus.google.com"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+                <a href="mailto:#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+      </div>
+  </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'lib/chart/chart.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
