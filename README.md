@@ -1,2 +1,2 @@
 # ChennaiPyDjango
-Personal website to demo while I present my speech
+Demo website to aid my speech
